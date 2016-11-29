@@ -1,4 +1,4 @@
-console.log("movie.js is running in node!");
+console.log("movie.js is running in node!!!");
 
 'use strict'
 
@@ -11,7 +11,15 @@ console.log("movie.js is running in node!");
 
 function movie(film) {
 	toPrint = "This worked!";
-	return toPrint;
+
+var request = require('request');
+request('http://www.omdbapi.com/?t=Star+Wars&?y=1977&?type=movie', function (error, response, body) {
+  if (!error && response.statusCode == 200) {
+    console.log(body) // Show the HTML for the Google homepage. 
+  }
+})
+
+	return request;
 }
 
 // var movie1 = $.get("http://www.omdbapi.com/?t=Star+Wars&?y=1977&?type=movie");
