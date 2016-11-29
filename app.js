@@ -2,11 +2,25 @@ console.log("app.js is running in node!");
 
 
 'use strict'
-// var movie = require("./movie");
-// var threeFavouriteMovies = [];
-// threeFavouriteMovies.forEach(function(film){
-//   // your code here
-// })
+var movie = require("./movie");
+var threeFavouriteMovies = [];
+threeFavouriteMovies.forEach(function(film){
+  // your code here
+  // console.log(film);
+  threeFavouriteMovies[0] = movie();
+});
+
+console.log(threeFavouriteMovies[0]);
+
+var text = movie();
+
+console.log(text);
+
+// var a = ["a", "b", "c"];
+
+// a.forEach(function(element) {
+//     console.log(element);
+// });
 
 // const randomNumber = require("./randomizer");
 
@@ -17,11 +31,11 @@ console.log("app.js is running in node!");
 
 // console.log("tonight's winning numbers are", winningNumbers, "!");
 
-const testExport = require("./movie");
+// const testExport = require("./movie");
 
-theResult = testExport();
+// theResult = testExport();
 
-console.log(theResult);
+// console.log(theResult);
 
 
 
